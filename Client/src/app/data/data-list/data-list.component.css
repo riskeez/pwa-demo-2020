@@ -1,0 +1,8 @@
+.child {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.child:last-child {
+  margin-bottom: 0;
+}

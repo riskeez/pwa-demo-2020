@@ -1,0 +1,5 @@
+<div *ngIf="!isLoading; else elseBlock">  
+  <app-data-item *ngFor="let item of list" class="child" [product]="item"></app-data-item>
+</div>
+
+<ng-template #elseBlock>Loading ... </ng-template>

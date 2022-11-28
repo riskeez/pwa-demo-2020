@@ -1,0 +1,21 @@
+<div *ngIf="estimation; else elseBlock" class="box">
+  <div>
+    <p><b>Total: </b>{{ estimation.total }} Mb</p>
+    <p><b>Used: </b>{{ estimation.used }} Mb</p>
+    <p><b>Remaining: </b>{{ estimation.remaining }} Mb</p>
+  </div>
+  <div style="display: block">
+    <canvas
+      baseChart
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [chartType]="pieChartType"
+    >
+    </canvas>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <div id="errorBox" class="box">
+    <strong>Storage Quota is not available on your device</strong>
+  </div></ng-template
+>
